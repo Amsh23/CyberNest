@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CyberNest — The Global Virtual Computer Club</title>
+  <meta name="description" content="CyberNest — a global virtual computer club for gamers, coders and creators. Join our 24/7 lounge: cybernest.club" />
+  <style>
+    :root{
+      --bg-1:#050319;
+      --bg-2:#2b0f4a;
+      --neon-c:#00d1ff;
+      --accent:#ff6ec7;
+      --glass: rgba(255,255,255,0.04);
+      --card: rgba(255,255,255,0.03);
+      --maxw:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:#eaf6ff}
+    .container{max-width:var(--maxw);margin:40px auto;padding:24px}
+
+    header{display:flex;align-items:center;gap:18px}
+    .logo{
+      display:inline-grid;place-items:center;width:82px;height:82px;border-radius:14px;background:linear-gradient(135deg, rgba(0,209,255,0.12), rgba(255,110,199,0.06));backdrop-filter:blur(6px);
+      box-shadow:0 6px 30px rgba(0,0,0,0.6), 0 0 12px rgba(0,209,255,0.06) inset;flex-shrink:0}
+    .logo svg{width:52px;height:52px;filter:drop-shadow(0 6px 18px rgba(0,209,255,0.15))}
+
+    h1{font-size:34px;margin:0;letter-spacing:0.6px;color:var(--neon-c);text-shadow:0 6px 24px rgba(0,209,255,0.06)}
+    .tag{color:var(--accent);font-weight:600;margin-top:6px}
+
+    .hero{
+      display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;margin-top:26px
+    }
+
+    .card{background:var(--card);border-radius:12px;padding:22px}
+    p.lead{font-size:16px;line-height:1.65;color:rgba(234,246,255,0.92)}
+
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:12px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--neon-c),#6ef0ff);color:#041228;box-shadow:0 8px 30px rgba(0,209,255,0.12)}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--neon-c)}
+
+    /* right column style */
+    .panel{position:relative;min-height:220px;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+    .mapbox{height:160px;border-radius:10px;overflow:hidden;background:linear-gradient(180deg,#1b0530,#320a4a);display:flex;align-items:center;justify-content:center}
+    .mapbox .placeholder{color:#cfeeff66;font-weight:600}
+
+    footer{margin-top:34px;color:#a6d9ff66;font-size:13px}
+
+    /* London skyline footer */
+    .skyline{margin-top:34px;height:150px;position:relative;border-radius:10px;overflow:hidden}
+    .skyline .grad{position:absolute;inset:0;background:linear-gradient(180deg,transparent, rgba(0,0,0,0.45));}
+    .skyline svg{position:absolute;left:0;bottom:0;width:100%;height:100%;opacity:0.9}
+
+    /* responsive */
+    @media(max-width:920px){.hero{grid-template-columns:1fr;}.container{padding:18px}.mapbox{height:140px}}
+    @media(max-width:480px){h1{font-size:26px}.logo{width:64px;height:64px}.hero{gap:18px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo" aria-hidden>
+        <!-- simple neon C icon -->
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="58" height="58" rx="12" fill="transparent"/>
+          <path d="M42 20c-5.5 0-10 4.5-10 10s4.5 10 10 10" stroke="url(#g)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M28 20H22a6 6 0 0 0 0 12h6" stroke="url(#g)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          <defs>
+            <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00d1ff"/><stop offset="1" stop-color="#ff6ec7"/></linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <h1>CyberNest</h1>
+        <div class="tag">The Global Virtual Computer Club</div>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section>
+        <div class="card">
+          <p class="lead">
+            Welcome to <strong>CyberNest</strong> — your 24/7 global lounge for gamers, coders and creators. We host virtual meetups, coding marathons, workshops, and gaming nights with members from London, New York, Tokyo and beyond.
+          </p>
+
+          <div class="cta">
+            <button class="btn btn-primary" onclick="location.href='#join'">Join the Club</button>
+            <button class="btn btn-ghost" onclick="location.href='mailto:cybernestvirtual@proton.me'">Contact: info</button>
+          </div>
+
+          <section style="margin-top:18px">
+            <h3 style="margin:6px 0;color:#dff8ff">What we offer</h3>
+            <ul style="margin:0 0 0 18px;color:#cfeeffcc;line-height:1.65">
+              <li>24/7 virtual lounge & voice channels</li>
+              <li>Weekly coding workshops & hack nights</li>
+              <li>Community tournaments and co-op sessions</li>
+              <li>Showcase zone for creators and portfolio reviews</li>
+            </ul>
+          </section>
+
+        </div>
+
+        <div id="join" class="card" style="margin-top:18px">
+          <h3 style="margin:0 0 8px;color:#dff8ff">Get started</h3>
+          <p style="margin:0 0 12px;color:#cfeeffcc">Create a free account on our Discord to join rooms and events.</p>
+          <p style="margin:0;font-weight:700;color:#aef7ff">Website: <a href="https://cybernest.club" style="color:var(--neon-c);text-decoration:none">cybernest.club</a></p>
+          <p style="margin:6px 0 0;color:#cfeeffcc">Contact: <a href="mailto:cybernestvirtual@proton.me" style="color:var(--accent);text-decoration:none">cybernestvirtual@proton.me</a></p>
+        </div>
+      </section>
+
+      <aside>
+        <div class="panel card">
+          <h4 style="margin:0 0 10px;color:#dff8ff">Location (virtual HQ)</h4>
+          <p style="margin:0 0 12px;color:#cfeeffcc">Based in London — Shoreditch / Soho vibe. We are a virtual-first community and welcome members worldwide.</p>
+
+          <div class="mapbox" aria-hidden>
+            <div class="placeholder">London • Shoreditch • Soho</div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="https://www.google.com/maps/place/Shoreditch+High+Street/" target="_blank">Open in Google Maps</a>
+            <a class="btn btn-ghost" href="https://discord.gg/" target="_blank">Join Discord</a>
+          </div>
+
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h4 style="margin:0 0 8px;color:#dff8ff">Quick links</h4>
+          <ul style="margin:0 0 0 18px;color:#cfeeffcc;line-height:1.9">
+            <li><a style="color:var(--neon-c);text-decoration:none" href="#">Events calendar (coming soon)</a></li>
+            <li><a style="color:var(--neon-c);text-decoration:none" href="#">Community rules</a></li>
+            <li><a style="color:var(--neon-c);text-decoration:none" href="#">Host an event</a></li>
+          </ul>
+        </div>
+
+      </aside>
+    </main>
+
+    <div class="skyline">
+      <div class="grad"></div>
+      <!-- simplified London skyline silhouette (SVG) -->
+      <svg viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 150 L40 150 L60 120 L100 120 L140 150 L180 150 L220 130 L260 150 L320 150 L360 110 L420 150 L480 150 L540 120 L600 150 L660 150 L700 130 L760 150 L820 150 L880 120 L940 150 L1000 150 L1060 110 L1120 150 L1180 150 L1200 150 L1200 200 L0 200 Z" fill="#0b0420"/>
+        <rect x="820" y="60" width="40" height="90" fill="#061427"/>
+        <circle cx="840" cy="86" r="12" fill="#05283d" />
+      </svg>
+    </div>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap">
+        <div>© <strong>CyberNest</strong> — Virtual Computer Club • 24/7</div>
+        <div style="color:#9fdcff88">Contact: <code>cybernestvirtual@proton.me</code></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
